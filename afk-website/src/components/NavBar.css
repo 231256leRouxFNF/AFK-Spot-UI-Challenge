@@ -1,7 +1,31 @@
-.icon,
-.nav-icon {
-    width: 20px;
-    height: 20px;
-    stroke-width: 1.8;
-    stroke: currentColor;
+.brand-text {
+    color: #ff4fcf;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    transition: color 0.3s ease;
+}
+
+.brand-text:hover {
+    color: #1b1c3e;
+}
+
+.nav-links {
+    gap: 24px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.nav-link-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b1c3e !important;
+    transition: all 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.nav-link-text:hover {
+    background-color: #f2f2f2;
+    color: #ff4fcf !important;
+    transform: translateY(-1px);
 }

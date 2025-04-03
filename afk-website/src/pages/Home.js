@@ -1,13 +1,14 @@
-import React from 'react';
-import Button from '../components/Button';
+// src/pages/Home.js
+import React from "react";
+import HeroSection from "../components/HeroSection";
 
 const Home = () => {
-    return (
-        <div>
-            <h1>Home Page</h1>
-            <p>Welcome to the home page!</p>
-        </div>
-    );
+  return (
+    <main>
+      <HeroSection />
+      {/* Add more homepage sections below */}
+    </main>
+  );
 };
 
 export default Home;

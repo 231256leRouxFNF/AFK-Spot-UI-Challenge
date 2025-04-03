@@ -9,7 +9,7 @@ const CustomNavbar = () => {
     <Navbar expand="lg" bg="white" className="shadow-sm py-3">
       <Container>
         <Navbar.Brand as={Link} to="/" className="brand-text">
-          CodeSprouts
+          FutureCoders
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">

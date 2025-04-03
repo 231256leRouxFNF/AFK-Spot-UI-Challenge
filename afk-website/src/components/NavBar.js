@@ -12,10 +12,6 @@ const NavBar = () => {
                 <a href="/services">Services</a>
                 <a href="/contact">Contact</a>
             </div>
-            <div className="navbar-buttons">
-                <button className="btn-signin">Sign In</button>
-                <button className="btn-signup">Sign Up</button>
-            </div>
         </nav>
     );
 };

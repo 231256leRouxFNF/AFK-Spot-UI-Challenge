@@ -1,31 +1,7 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-}
-
-.navbar-logo a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar-links {
-    display: flex;
-    gap: 15px;
-}
-
-.navbar-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.navbar-links a:hover {
-    color: #00bcd4;
+.icon,
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    stroke-width: 1.8;
+    stroke: currentColor;
 }

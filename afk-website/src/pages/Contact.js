@@ -1,13 +1,14 @@
 // src/pages/ContactUs.js
 import React from "react";
 import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
+import "./Contact.css"; // Assuming you have a CSS file for styles
 
 const ContactUs = () => {
   return (
     <Container fluid className="py-5">
       <Row className="justify-content-center mb-5">
         <Col md={6}>
-          <h2>Contact Our Team</h2>
+          <h2 class="contact-h2">Contact Our Team</h2>
           <Form>
             <Form.Group className="mb-3" controlId="formName">
               <Form.Label>Your name</Form.Label>
@@ -16,7 +17,7 @@ const ContactUs = () => {
 
             <Form.Group className="mb-3" controlId="formEmail">
               <Form.Label>Your email</Form.Label>
-              <Form.Control type="email" placeholder="yourmail@emaily.com" />
+              <Form.Control type="email" placeholder="yourmail@emaily.com" class="form-els" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formMessage">

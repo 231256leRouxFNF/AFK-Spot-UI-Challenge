@@ -2,6 +2,7 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
+import "./Home.css"; // Assuming you have a CSS file for styles
 
 const Home = () => {
   return (
@@ -11,8 +12,8 @@ const Home = () => {
       
       <section className="about-section" style={{ display: "flex", alignItems: "center", padding: "2rem", backgroundColor: "#f9f9f9" }}>
         <div>
-          <h2>Feature</h2>
-          <p>
+          <h2 class="home-body-h2">Feature</h2>
+          <p class="home-body-p">
             Do consectetur proident proident id eiusmod deserunt consequat pariatur ad ex velit do Lorem reprehenderit. id eiusmod deserunt consequat pariatur ad ex velit do Lorem reprehenderit.
           </p>
         </div>
@@ -30,8 +31,8 @@ const Home = () => {
           style={{ width: "40%", marginRight: "2rem", borderRadius: "8px" }} 
         />
         <div>
-          <h2>Feature</h2>
-          <p>
+          <h2 class="home-body-h2">Feature</h2>
+          <p class="home-body-p">
             Do consectetur proident proident id eiusmod deserunt consequat pariatur ad ex velit do Lorem reprehenderit. id eiusmod deserunt consequat pariatur ad ex velit do Lorem reprehenderit.
           </p>
         </div>
@@ -39,8 +40,8 @@ const Home = () => {
 
       <section className="about-section" style={{ display: "flex", alignItems: "center", padding: "2rem", backgroundColor: "#f9f9f9" }}>
         <div>
-          <h2>Feature</h2>
-          <p>
+          <h2 class="home-body-h2">Feature</h2>
+          <p class="home-body-p">
             Do consectetur proident proident id eiusmod deserunt consequat pariatur ad ex velit do Lorem reprehenderit. id eiusmod deserunt consequat pariatur ad ex velit do Lorem reprehenderit.
           </p>
         </div>

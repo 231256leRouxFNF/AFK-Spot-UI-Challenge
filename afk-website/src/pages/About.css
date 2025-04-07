@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+.about-page {
+  font-family: 'Quicksand', sans-serif;
+  background: #f9f9ff;
+  color: #2e2e6f;
+  padding: 60px 20px;
+}
+
+.about-section {
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ff4fc9; /* bright pink title color */
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.about-section ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.about-section li {
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.5;
+}

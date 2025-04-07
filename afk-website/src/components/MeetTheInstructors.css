@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+.instructors-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #f6f1ff, #eae6ff);
+  text-align: center;
+}
+
+.instructors-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #2e2e6f;
+}
+
+.instructors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 60px;
+}
+
+.instructor-card {
+  background-color: white;
+  border-radius: 22px;
+  padding: 30px;
+  width: 420px; /*Nice */
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.instructor-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.instructor-image {
+  width: 100%;
+  height: 260px; 
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.instructor-name {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 24px;
+  color: #ff4fc9;
+}
+
+.instructor-bio {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  margin-top: 16px;
+  color: #333;
+  line-height: 1.6;
+}

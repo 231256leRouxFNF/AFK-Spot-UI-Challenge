@@ -1,21 +1,67 @@
-.contact-h2 {
-    gap: 24px;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 700;
-    color: #0b3f94 !important;
-    transition: all 0.3s ease;
-    padding: 6px 12px;
-    border-radius: 6px;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
+.contact-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.form-els{
-    gap: 24px;
+.contact-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.contact-h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff4fcf;
+    margin-bottom: 16px;
+}
+
+.contact-subtext {
+    font-size: 16px;
+    color: #1b1c3e;
+    margin-bottom: 24px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #1b1c3e;
+}
+
+.form-control {
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
-    font-weight: 500;
-    color: #1b2f3e !important;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #00b4ff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 180, 255, 0.2);
+}
+
+button[type="submit"] {
+    background-color: #ff4fcf;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 28px;
+    border-radius: 999px;
+    color: #fff;
+    margin-top: 10px;
     transition: all 0.3s ease;
-    padding: 6px 12px;
-    border-radius: 6px;
+}
+
+button[type="submit"]:hover {
+    background-color: #e048b8;
+    transform: scale(1.05);
 }

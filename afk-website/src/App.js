@@ -1,22 +1,18 @@
-import React, { useEffect } from "react";
+// src/App.js
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-import CustomNavbar from "./components/Navbar";
+import CustomNavbar from "./components/Navbar"; // ✅ Use correct case
 import Home from "./pages/Home";
 import AboutPage from "./pages/About";
 import CurriculumPage from "./pages/Curriculum";
 import ContactPage from "./pages/Contact";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+import "aos/dist/aos.css";
+import "bootstrap/dist/css/bootstrap.min.css"; // ✅ This must still be included
 import "./index.css";
 
-function App() {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
 
+function App() {
   return (
     <Router>
       <CustomNavbar />

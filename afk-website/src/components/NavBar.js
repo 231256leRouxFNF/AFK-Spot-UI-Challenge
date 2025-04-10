@@ -19,7 +19,7 @@ const CustomNavbar = () => {
             alt="FutureCoders Logo"
             style={{ height: "40px", width: "auto" }}
           /> */}
-          <span className="brand-text">FutureCoders</span>
+          <span className="brand-text">FutureCoder</span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbar-nav" />

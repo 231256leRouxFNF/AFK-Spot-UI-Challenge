@@ -29,7 +29,6 @@
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 79, 207, 0.2);
 }
 
 .custom-button:hover {

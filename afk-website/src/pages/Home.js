@@ -15,6 +15,7 @@ import Img3 from "../assets/3.svg";
 import Img4 from "../assets/6.svg";
 import FeatureImg1 from "../assets/8.svg";
 import FeatureImg2 from "../assets/7.svg";
+import Blob1 from "../assets/Blob1.svg";
 
 import "./Home.css";
 
@@ -26,11 +27,15 @@ const Home = () => {
   return (
     <main>
       {/* Hero Section */}
-      <HeroSection />
+      <HeroSection data-aos="fade-up" />
+
+      {/* <div className="section-divider">
+        <img src={Blob1} alt="Decorative blob" className="section-blob" />
+      </div> */}
 
       {/* Mission Statement */}
       <section
-        className="home-section mission mission-white"
+        className="home-section mission highlights bg-light-wave"
         data-aos="fade-up"
       >
         <div className="container-split">
@@ -49,7 +54,7 @@ const Home = () => {
 
       {/* Highlights Section */}
       <section
-        className="home-section highlights bg-light-wave"
+        className="home-section feature bg-light-yellow"
         data-aos="fade-up"
       >
         <div className="container-narrow">
@@ -84,10 +89,7 @@ const Home = () => {
       </section>
 
       {/* Why Us Section */}
-      <section
-        className="home-section feature feature-light"
-        data-aos="fade-up"
-      >
+      <section className="home-section feature feature-light">
         <div className="container-split">
           {/* Left Image */}
           <img
@@ -142,7 +144,7 @@ const Home = () => {
       {/* Testimonials */}
       <section
         className="home-section testimonials bg-light-wave"
-        data-aos="zoom-in"
+        data-aos="fade-up"
       >
         <div className="container-narrow">
           <h2 className="section-title">What Parents Say</h2>

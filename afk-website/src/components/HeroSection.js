@@ -3,26 +3,35 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "./Button";
 import "./HeroSection.css";
+import HeroImg from "../assets/9.svg";
 
 const HeroSection = () => {
   return (
     <div className="hero-section">
-      <Container className="text-center">
-        <Row className="justify-content-center">
-          <Col lg={8}>
+      <Container>
+        <Row className="align-items-center">
+          <Col md={6} className="hero-image-col">
+            <img
+              src={HeroImg}
+              alt="Coding kids illustration"
+              className="hero-image"
+            />
+          </Col>
+          <Col md={6} className="hero-text">
             <h1 className="hero-title">
-              <span className="white-text">Welcome to</span>{" "}
-              <span className="pink-text">FutureCoders</span>
+              <span className="Heading1">Are you ready to be a</span>
+              <br />
+              <span className="Heading2">FutureCoder?</span>
             </h1>
             <p className="hero-subtext">
-              Join our 10-month adventure in coding — designed for curious kids
-              aged 8 to 13. Where young minds explore the universe of code,
-              games, and creativity.
+              Join our fun and interactive 10-month coding program designed for
+              kids aged 8 to 13. Learn to code with games, creativity, and
+              real-world tools.
             </p>
             <Button
-              label="Launch Your Journey"
+              label="Enroll Now"
               onClick={() => (window.location.href = "/contact")}
-              className="hero-banner-button"
+              className="button"
             />
           </Col>
         </Row>

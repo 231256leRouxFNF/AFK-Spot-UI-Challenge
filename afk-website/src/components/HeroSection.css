@@ -1,52 +1,59 @@
+:root {
+    --color-dark-blue: #636dc7;
+    --color-light-blue: #6cafe2;
+    --color-sea-green: #76cdac;
+    --color-yellow: #fbb739;
+    --color-pink: #faa09e;
+    --text-color: #373636;
+    --nav-bg: #ffffff;
+}
+
 .hero-section {
-    background-image: url('../assets/layered-waves-haikei.svg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: var(--nav-bg);
+    padding-top: 10px;
+    padding-bottom: -10px;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
-    padding: 0 20px;
 }
 
 .hero-title {
     font-size: 48px;
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 100px;
-
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: var(--text-color);
 }
 
-.white-text {
-    color: #ffffff;
+.Heading1 {
+    color: var(--color-dark-blue);
+    font-size: 48px;
 }
 
-.pink-text {
-    color: #ff4fcf;
+.Heading2 {
+    color: var(--color-yellow);
+    font-size: 78px;
+    margin-bottom: 20px;
 }
 
 .hero-subtext {
     font-size: 18px;
-    font-weight: 400;
-    color: #ffffff;
+    margin-bottom: 20px;
     max-width: 600px;
-    margin: 0 auto 30px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-color);
+    padding: 0 34px;
+    text-align: center;
 }
 
-.hero-button {
-    background-color: #ffffff;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 16px;
-    color: #ff4fcf;
-    transition: all 0.3s ease;
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 60px;
+    /* Increased spacing between text and image */
 }
 
-.hero-button:hover {
-    transform: scale(1.05);
-    background-color: #ffe6f4;
+.button {
+    margin-top: 20px;
 }

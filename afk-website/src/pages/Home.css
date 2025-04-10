@@ -35,12 +35,13 @@
     line-height: 1.6;
 }
 
-/* .bg-light-wave {
-    background: linear-gradient(to right, #e6f6fb, #e6f6fb);
-} */
 
 .bg-light-wave {
-    background: linear-gradient(to right, #dff5ff, #dff5ff);
+    background: linear-gradient(to right, #e7f7fd, #e7f7fd);
+}
+
+.bg-light-yellow {
+    background: linear-gradient(to right, #fef9e7, #fef9e7);
 }
 
 .highlight-grid {
@@ -227,9 +228,36 @@
 /* White background mission block */
 .mission-white {
     background-color: var(--bg-white);
+    margin-top: -130px;
 }
 
 .testimonials {
     padding-top: 60px;
     padding-bottom: 80px;
 }
+
+.section-divider {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    margin-top: -40px;
+    z-index: 1;
+}
+
+.section-blob {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: -780px;
+    left: 650px;
+    z-index: -1;
+    scale: 0.45;
+    rotate: -3deg;
+}
+
+.mission-with-blob {
+    position: relative;
+    z-index: 0;
+}
+

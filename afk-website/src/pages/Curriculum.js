@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< Updated upstream
+=======
+import './Curriculum.css';
+import { FaLaptopCode, FaGamepad, FaGraduationCap, FaGlobe, FaPaintBrush, FaRobot, FaCodeBranch, FaRocket, FaProjectDiagram } from 'react-icons/fa';
+>>>>>>> Stashed changes
 
 const Curriculum = () => {
     return (

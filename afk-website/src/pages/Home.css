@@ -1,0 +1,97 @@
+.home-section {
+    padding: 80px 20px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1b1c3e;
+    margin-bottom: 40px;
+}
+
+.mission-text {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.highlight-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 30px 24px;
+    width: 260px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-4px);
+}
+
+.highlight-card h3 {
+    font-size: 20px;
+    color: #00b4ff;
+    margin-bottom: 12px;
+}
+
+.highlight-card p {
+    font-size: 16px;
+    color: #333;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+}
+
+.about-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-image {
+    width: 40%;
+    border-radius: 12px;
+    max-width: 400px;
+}
+
+.home-body-h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1b1c3e;
+}
+
+.home-body-p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.cta-banner {
+    background-color: #ff4fcf;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta-banner h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}

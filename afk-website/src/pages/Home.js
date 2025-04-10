@@ -1,21 +1,15 @@
 // src/pages/Home.js
 import React from "react";
 import HeroSection from "../components/HeroSection";
-<<<<<<< Updated upstream
-=======
 import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
 import Button from "../components/Button";
 import "./Home.css";
->>>>>>> Stashed changes
 
 const Home = () => {
   return (
     <main>
       <HeroSection />
-<<<<<<< Updated upstream
-      {/* Add more homepage sections below */}
-=======
 
       {/* Mission Section */}
       <section className="home-section mission">
@@ -104,7 +98,6 @@ const Home = () => {
       </section>
 
       <Footer />
->>>>>>> Stashed changes
     </main>
   );
 };

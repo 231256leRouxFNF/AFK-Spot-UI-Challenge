@@ -3,26 +3,28 @@ import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+// import Logo from "../assets/Logo.svg"; 
 
 const CustomNavbar = () => {
   return (
-    <Navbar expand="lg" bg="white" className="shadow-sm py-3">
+    <Navbar expand="lg" bg="white" className="shadow-sm py-3 navbar">
       <Container>
         <Navbar.Brand
           as={Link}
           to="/"
-          style={{
-            color: "#ff4fcf",
-            fontFamily: "Quicksand",
-            fontWeight: "700",
-            fontSize: "28px",
-          }}
+          className="d-flex align-items-center gap-2"
         >
-          FutureCoders
+          {/* <img
+            src={Logo}
+            alt="FutureCoders Logo"
+            style={{ height: "40px", width: "auto" }}
+          /> */}
+          <span className="brand-text">FutureCoders</span>
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
-          <Nav className="ms-auto" style={{ gap: "20px" }}>
+          <Nav className="ms-auto nav-links">
             <Nav.Link as={Link} to="/" className="nav-link-custom">
               Home
             </Nav.Link>
@@ -32,7 +34,11 @@ const CustomNavbar = () => {
             <Nav.Link as={Link} to="/curriculum" className="nav-link-custom">
               Curriculum
             </Nav.Link>
-            <Nav.Link as={Link} to="/contact" className="nav-link-custom">
+            <Nav.Link
+              as={Link}
+              to="/contact"
+              className="nav-link-custom enroll-btn"
+            >
               Enroll
             </Nav.Link>
           </Nav>

@@ -1,0 +1,40 @@
+/* src/components/HighlightCard.css */
+.highlight-card {
+    display: flex;
+    align-items: flex-start;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    gap: 20px;
+    text-align: left;
+}
+
+.highlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-icon {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.highlight-text {
+    flex: 1;
+}
+
+.highlight-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #00b4ff;
+    margin: 0 0 8px;
+}
+
+.highlight-card p {
+    font-size: 16px;
+    color: #1b1c3e;
+    margin: 0;
+}

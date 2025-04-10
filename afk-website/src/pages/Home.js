@@ -7,6 +7,15 @@ import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
 import Button from "../components/Button";
+import HighlightCard from "../components/HighlightCard";
+
+import Img1 from "../assets/1.svg";
+import Img2 from "../assets/5.svg";
+import Img3 from "../assets/3.svg";
+import Img4 from "../assets/6.svg";
+import FeatureImg1 from "../assets/8.svg";
+import FeatureImg2 from "../assets/7.svg";
+
 import "./Home.css";
 
 const Home = () => {
@@ -20,15 +29,21 @@ const Home = () => {
       <HeroSection />
 
       {/* Mission Statement */}
-      <section className="home-section mission" data-aos="fade-up">
-        <div className="container-narrow">
-          <h2 className="section-title">Our Mission</h2>
-          <p className="mission-text">
-            At FutureCoders, we believe in nurturing young minds through
-            creative, hands-on coding. Our program empowers kids to think
-            logically, build confidently, and explore their imaginations through
-            technology.
-          </p>
+      <section
+        className="home-section mission mission-white"
+        data-aos="fade-up"
+      >
+        <div className="container-split">
+          <div className="feature-text">
+            <h2 className="section-title">Our Mission</h2>
+            <p className="mission-text">
+              At FutureCoders, we believe in nurturing young minds through
+              creative, hands-on coding. Our program empowers kids to think
+              logically, build confidently, and explore their imaginations
+              through technology.
+            </p>
+          </div>
+          <img src={FeatureImg2} alt="Coding kids" className="feature-image" />
         </div>
       </section>
 
@@ -40,83 +55,95 @@ const Home = () => {
         <div className="container-narrow">
           <h2 className="section-title">What We Offer</h2>
           <div className="highlight-grid">
-            <div className="highlight-card" data-aos="zoom-in">
-              <h3>📅 Program Length</h3>
-              <p>10-month journey from February to November.</p>
-            </div>
-            <div
-              className="highlight-card"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <h3>👩‍🚀 Ages 8–13</h3>
-              <p>Designed just for junior explorers.</p>
-            </div>
-            <div
-              className="highlight-card"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <h3>🎮 Skills Taught</h3>
-              <p>Game dev, web design, logic, and problem-solving.</p>
-            </div>
-            <div
-              className="highlight-card"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <h3>🛠️ Coding Tools</h3>
-              <p>Scratch, HTML, CSS, and JavaScript.</p>
-            </div>
+            <HighlightCard
+              imageSrc={Img1}
+              title="Program Length"
+              description="10-month journey from February to November."
+              borderColor="#6cafe2"
+            />
+            <HighlightCard
+              imageSrc={Img2}
+              title="Ages 8–13"
+              description="Designed just for junior explorers."
+              borderColor="#fbb739"
+            />
+            <HighlightCard
+              imageSrc={Img3}
+              title="Skills Taught"
+              description="Game dev, web design, logic, and problem-solving."
+              borderColor="#faa09e"
+            />
+            <HighlightCard
+              imageSrc={Img4}
+              title="Coding Tools"
+              description="Scratch, HTML, CSS, and JavaScript."
+              borderColor="#76cdac"
+            />
           </div>
         </div>
       </section>
 
-      {/* Feature Block 1 */}
+      {/* Why Us Section */}
       <section
         className="home-section feature feature-light"
-        data-aos="fade-right"
+        data-aos="fade-up"
       >
         <div className="container-split">
-          <div className="feature-text">
-            <h2>Explore Real Projects</h2>
-            <p>
-              Students design and build real games, websites, and more — using
-              professional tools in a playful, step-by-step environment.
-            </p>
-          </div>
+          {/* Left Image */}
           <img
-            src="/assets/image1.jpg"
-            alt="Student coding"
-            className="feature-image"
+            src={FeatureImg1}
+            alt="Student coding project"
+            className="feature-image-large"
           />
-        </div>
-      </section>
 
-      {/* Feature Block 2 */}
-      <section
-        className="home-section feature feature-pink"
-        data-aos="fade-left"
-      >
-        <div className="container-split reverse">
-          <img
-            src="/assets/image2.jpg"
-            alt="Team collaboration"
-            className="feature-image"
-          />
-          <div className="feature-text">
-            <h2>Team Learning, Personal Growth</h2>
-            <p>
-              Our classes combine collaborative games and individual missions —
-              helping each student discover their strengths and build
-              confidence.
-            </p>
+          {/* Right Text */}
+          <div className="feature-text-block">
+            <h2 className="section-title">Why Us?</h2>
+
+            <div className="feature-item">
+              <span className="feature-number">1</span>
+              <div>
+                <h3>Explore Real Projects</h3>
+                <p>
+                  Students design and build real games, websites, and more —
+                  using professional tools in a playful, step-by-step
+                  environment.
+                </p>
+              </div>
+            </div>
+
+            <div className="feature-item">
+              <span className="feature-number">2</span>
+              <div>
+                <h3>Team Learning, Personal Growth</h3>
+                <p>
+                  Our classes combine collaborative games and individual
+                  missions — helping each student discover their strengths and
+                  build confidence.
+                </p>
+              </div>
+            </div>
+
+            <div className="feature-item">
+              <span className="feature-number">3</span>
+              <div>
+                <h3>Guided by Passionate Mentors</h3>
+                <p>
+                  Every class is led by instructors who are not just skilled
+                  developers, but educators passionate about nurturing
+                  creativity and curiosity.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="home-section testimonials" data-aos="zoom-in">
+      <section
+        className="home-section testimonials bg-light-wave"
+        data-aos="zoom-in"
+      >
         <div className="container-narrow">
           <h2 className="section-title">What Parents Say</h2>
           <Testimonials />

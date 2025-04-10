@@ -1,14 +1,26 @@
 /* src/index.css */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
-body {
-  font-family: 'Quicksand', sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-  color: #1b1c3e;
+:root {
+  --color-dark-blue: #636dc7;
+  --color-light-blue: #6cafe2;
+  --color-sea-green: #76cdac;
+  --color-yellow: #fbb739;
+  --color-pink: #faa09e;
+  --text-color: #373636;
+  --bg-white: #ffffff;
 }
 
-a {
-  text-decoration: none;
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--text-color);
+  background-color: #fefeff;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-dark-blue);
+  font-weight: 700;
 }

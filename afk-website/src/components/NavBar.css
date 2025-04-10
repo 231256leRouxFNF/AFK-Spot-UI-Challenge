@@ -1,6 +1,16 @@
+:root {
+    --color-dark-blue: #636dc7;
+    --color-light-blue: #6cafe2;
+    --color-sea-green: #76cdac;
+    --color-yellow: #fbb739;
+    --color-pink: #faa09e;
+    --text-color: #373636;
+    --nav-bg: #ffffff;
+}
+
 /* Navbar Branding */
 .brand-text {
-    color: #ff4fcf;
+    color: var(--color-dark-blue);
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 28px;
@@ -8,7 +18,7 @@
 }
 
 .brand-text:hover {
-    color: #1b1c3e;
+    color: var(--color-yellow);
 }
 
 /* Nav container spacing */
@@ -17,32 +27,38 @@
     align-items: center;
     gap: 24px;
     font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
 }
 
-/* Nav link text */
 .nav-link-custom {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
-    color: #1b1c3e !important;
+    color: var(--text-color) !important;
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 10px;
     transition: all 0.3s ease;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
 }
 
 /* Hover animation */
 .nav-link-custom:hover {
-    background-color: #fcecff;
-    color: #ff4fcf !important;
+    background-color: #f6f9ff;
+    color: var(--color-dark-blue) !important;
     transform: translateY(-2px);
 }
 
-/* Optional: sticky navbar effect */
+/* Sticky navbar effect */
 .navbar {
+    background-color: var(--nav-bg);
     transition: all 0.3s ease;
+    box-shadow: none;
 }
 
 .navbar.scrolled {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    background-color: #ffffff;
 }

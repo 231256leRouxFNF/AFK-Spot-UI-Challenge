@@ -1,6 +1,17 @@
+:root {
+    --color-dark-blue: #636dc7;
+    --color-light-blue: #6cafe2;
+    --color-sea-green: #76cdac;
+    --color-yellow: #fbb739;
+    --color-pink: #faa09e;
+    --text-color: #373636;
+    --bg-white: #ffffff;
+}
+
 .home-section {
     padding: 80px 20px;
     font-family: 'Quicksand', sans-serif;
+    background-color: #f9f9f9;
 }
 
 .container-narrow {
@@ -12,20 +23,24 @@
 .section-title {
     font-size: 36px;
     font-weight: 700;
-    color: #1b1c3e;
+    color: var(--color-dark-blue);
     margin-bottom: 32px;
 }
 
 .mission-text {
     font-size: 18px;
-    color: #333;
+    color: var(--text-color);
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
 }
 
+/* .bg-light-wave {
+    background: linear-gradient(to right, #e6f6fb, #e6f6fb);
+} */
+
 .bg-light-wave {
-    background: #f3fbff;
+    background: linear-gradient(to right, #dff5ff, #dff5ff);
 }
 
 .highlight-grid {
@@ -39,42 +54,72 @@
 @media (max-width: 768px) {
     .highlight-grid {
         grid-template-columns: 1fr;
-        /* Stack cards on smaller screens */
     }
 }
 
 .highlight-card {
-    background: white;
-    border-radius: 20px;
-    padding: 25px 25px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    background: var(--bg-white);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
+    gap: 24px;
+    text-align: left;
 }
 
 .highlight-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-icon {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.highlight-text {
+    flex: 1;
 }
 
 .highlight-card h3 {
     font-size: 20px;
     font-weight: 600;
-    color: #00b4ff;
-    margin-bottom: 12px;
+    color: var(--color-dark-blue);
+    margin: 0 0 8px;
 }
 
 .highlight-card p {
     font-size: 16px;
-    color: #1b1c3e;
+    color: var(--text-color);
+    margin: 0;
 }
 
+.highlight-card:nth-child(1) {
+    border-top: 6px solid var(--color-light-blue);
+}
 
+.highlight-card:nth-child(2) {
+    border-top: 6px solid var(--color-yellow);
+}
+
+.highlight-card:nth-child(3) {
+    border-top: 6px solid var(--color-pink);
+}
+
+.highlight-card:nth-child(4) {
+    border-top: 6px solid var(--color-sea-green);
+}
+
+/* Feature Sections */
 .feature {
     padding: 80px 20px;
 }
 
 .feature-light {
-    background-color: #f9f9f9;
+    background-color: #fefeff;
 }
 
 .feature-pink {
@@ -101,13 +146,13 @@
 
 .feature-text h2 {
     font-size: 30px;
-    color: #1b1c3e;
+    color: var(--color-dark-blue);
     margin-bottom: 16px;
 }
 
 .feature-text p {
     font-size: 18px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .feature-image {
@@ -116,8 +161,57 @@
     border-radius: 16px;
 }
 
+.feature-image-large {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* New "Why Us?" Feature Block Styling */
+.feature-text-block {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: left;
+}
+
+.feature-number {
+    background-color: var(--color-yellow);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.feature-item h3 {
+    font-size: 20px;
+    color: var(--color-dark-blue);
+    margin-bottom: 5px;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* CTA Banner */
 .cta-banner {
-    background-color: #ff4fcf;
+    background: linear-gradient(to right, #636dc7, #6cafe2, #76cdac);
     color: white;
     text-align: center;
     padding: 60px 20px;
@@ -127,4 +221,15 @@
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 24px;
+    color: white;
+}
+
+/* White background mission block */
+.mission-white {
+    background-color: var(--bg-white);
+}
+
+.testimonials {
+    padding-top: 60px;
+    padding-bottom: 80px;
 }

@@ -1,4 +1,4 @@
-.custom-button {
+/* .custom-button {
   padding: 12px 28px;
   font-size: 16px;
   font-weight: 600;
@@ -16,6 +16,25 @@
   background-color: #e048b8;
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(255, 79, 207, 0.3);
+} */
+
+.custom-button {
+  background-color: var(--color-dark-blue);
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 79, 207, 0.2);
+}
+
+.custom-button:hover {
+  background-color: var(--color-yellow);
+  transform: scale(1.05);
 }
 
 .custom-button:disabled {

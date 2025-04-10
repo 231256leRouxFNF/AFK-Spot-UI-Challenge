@@ -9,6 +9,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <main>
+      
       <HeroSection />
 
       {/* Mission Section */}

@@ -21,22 +21,24 @@ import "./Home.css";
 
 const Home = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 100,
+    });
   }, []);
 
   return (
     <main>
       {/* Hero Section */}
-      <HeroSection data-aos="fade-up" />
-
-      {/* <div className="section-divider">
-        <img src={Blob1} alt="Decorative blob" className="section-blob" />
-      </div> */}
+      <HeroSection data-aos="fade-up" data-aos-duration="1200" />
 
       {/* Mission Statement */}
       <section
         className="home-section mission highlights bg-light-wave"
-        data-aos="fade-up"
+        data-aos="fade-left"
+        data-aos-duration="1000"
       >
         <div className="container-split">
           <div className="feature-text">
@@ -48,14 +50,21 @@ const Home = () => {
               through technology.
             </p>
           </div>
-          <img src={FeatureImg2} alt="Coding kids" className="feature-image" />
+          <div className="mission-image-wrapper">
+            <img
+              src={FeatureImg2}
+              alt="Coding kids"
+              className="feature-image"
+            />
+          </div>
         </div>
       </section>
 
       {/* Highlights Section */}
       <section
         className="home-section feature bg-light-yellow"
-        data-aos="fade-up"
+        data-aos="zoom-in"
+        data-aos-duration="800"
       >
         <div className="container-narrow">
           <h2 className="section-title">What We Offer</h2>
@@ -89,7 +98,11 @@ const Home = () => {
       </section>
 
       {/* Why Us Section */}
-      <section className="home-section feature feature-light">
+      <section
+        className="home-section feature feature-light"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <div className="container-split">
           {/* Left Image */}
           <img
@@ -102,7 +115,11 @@ const Home = () => {
           <div className="feature-text-block">
             <h2 className="section-title">Why Us?</h2>
 
-            <div className="feature-item">
+            <div
+              className="feature-item"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <span className="feature-number">1</span>
               <div>
                 <h3>Explore Real Projects</h3>
@@ -114,7 +131,11 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="feature-item">
+            <div
+              className="feature-item"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <span className="feature-number">2</span>
               <div>
                 <h3>Team Learning, Personal Growth</h3>
@@ -126,7 +147,11 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="feature-item">
+            <div
+              className="feature-item"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <span className="feature-number">3</span>
               <div>
                 <h3>Guided by Passionate Mentors</h3>
@@ -145,6 +170,7 @@ const Home = () => {
       <section
         className="home-section testimonials bg-light-wave"
         data-aos="fade-up"
+        data-aos-duration="1000"
       >
         <div className="container-narrow">
           <h2 className="section-title">What Parents Say</h2>
@@ -153,7 +179,11 @@ const Home = () => {
       </section>
 
       {/* Call to Action Banner */}
-      <section className="home-section cta-banner" data-aos="fade-up">
+      <section
+        className="home-section cta-banner"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
         <h2>Ready to launch your child’s coding journey?</h2>
         <Button
           label="Enroll Now"

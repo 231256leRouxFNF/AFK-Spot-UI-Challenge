@@ -1,5 +1,8 @@
 // src/pages/Home.js
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
@@ -7,95 +10,126 @@ import Button from "../components/Button";
 import "./Home.css";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <main>
-      
+      {/* Hero Section */}
       <HeroSection />
 
-      {/* Mission Section */}
-      <section className="home-section mission">
-        <h2 className="section-title">Our Mission</h2>
-        <p className="mission-text">
-          At FutureCoders, we believe in nurturing young minds through creative,
-          hands-on coding. Our program empowers kids to think logically, build
-          confidently, and explore their imaginations through technology.
-        </p>
+      {/* Mission Statement */}
+      <section className="home-section mission" data-aos="fade-up">
+        <div className="container-narrow">
+          <h2 className="section-title">Our Mission</h2>
+          <p className="mission-text">
+            At FutureCoders, we believe in nurturing young minds through
+            creative, hands-on coding. Our program empowers kids to think
+            logically, build confidently, and explore their imaginations through
+            technology.
+          </p>
+        </div>
       </section>
 
       {/* Highlights Section */}
-      <section className="home-section highlights">
-        <div className="highlight-card">
-          <h3>📅 Program Length</h3>
-          <p>10-month curriculum, February to November.</p>
-        </div>
-        <div className="highlight-card">
-          <h3>👩‍🚀 Age Range</h3>
-          <p>Designed for kids aged 8 to 13 years.</p>
-        </div>
-        <div className="highlight-card">
-          <h3>🎮 Skills Taught</h3>
-          <p>
-            Game development, web design, coding logic, and problem solving.
-          </p>
-        </div>
-        <div className="highlight-card">
-          <h3>🛠️ Tools</h3>
-          <p>Scratch, HTML, CSS, JavaScript.</p>
-        </div>
-      </section>
-
-      {/* Feature Sections (Alternating) */}
-      <section className="about-section">
-        <div>
-          <h2 className="home-body-h2">Explore Real Projects</h2>
-          <p className="home-body-p">
-            Kids work on real-world style projects from building games in
-            Scratch to coding personal websites with HTML, CSS, and JavaScript.
-          </p>
-        </div>
-        <img
-          src="/assets/image1.jpg"
-          alt="Coding project"
-          className="about-image"
-        />
-      </section>
-
-      <section className="about-section reverse">
-        <img src="/assets/image2.jpg" alt="Teamwork" className="about-image" />
-        <div>
-          <h2 className="home-body-h2">Team-Based Learning</h2>
-          <p className="home-body-p">
-            We foster teamwork through coding challenges that inspire
-            collaboration, communication, and creativity.
-          </p>
+      <section
+        className="home-section highlights bg-light-wave"
+        data-aos="fade-up"
+      >
+        <div className="container-narrow">
+          <h2 className="section-title">What We Offer</h2>
+          <div className="highlight-grid">
+            <div className="highlight-card" data-aos="zoom-in">
+              <h3>📅 Program Length</h3>
+              <p>10-month journey from February to November.</p>
+            </div>
+            <div
+              className="highlight-card"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <h3>👩‍🚀 Ages 8–13</h3>
+              <p>Designed just for junior explorers.</p>
+            </div>
+            <div
+              className="highlight-card"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <h3>🎮 Skills Taught</h3>
+              <p>Game dev, web design, logic, and problem-solving.</p>
+            </div>
+            <div
+              className="highlight-card"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <h3>🛠️ Coding Tools</h3>
+              <p>Scratch, HTML, CSS, and JavaScript.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="about-section">
-        <div>
-          <h2 className="home-body-h2">Safe & Fun Environment</h2>
-          <p className="home-body-p">
-            Our programs are age-appropriate and designed to make kids feel
-            safe, supported, and excited to explore tech.
-          </p>
+      {/* Feature Block 1 */}
+      <section
+        className="home-section feature feature-light"
+        data-aos="fade-right"
+      >
+        <div className="container-split">
+          <div className="feature-text">
+            <h2>Explore Real Projects</h2>
+            <p>
+              Students design and build real games, websites, and more — using
+              professional tools in a playful, step-by-step environment.
+            </p>
+          </div>
+          <img
+            src="/assets/image1.jpg"
+            alt="Student coding"
+            className="feature-image"
+          />
         </div>
-        <img
-          src="/assets/image3.jpg"
-          alt="Kids learning"
-          className="about-image"
-        />
+      </section>
+
+      {/* Feature Block 2 */}
+      <section
+        className="home-section feature feature-pink"
+        data-aos="fade-left"
+      >
+        <div className="container-split reverse">
+          <img
+            src="/assets/image2.jpg"
+            alt="Team collaboration"
+            className="feature-image"
+          />
+          <div className="feature-text">
+            <h2>Team Learning, Personal Growth</h2>
+            <p>
+              Our classes combine collaborative games and individual missions —
+              helping each student discover their strengths and build
+              confidence.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Testimonials */}
-      <section className="home-section testimonials">
-        <h2 className="section-title">What Parents Say</h2>
-        <Testimonials />
+      <section className="home-section testimonials" data-aos="zoom-in">
+        <div className="container-narrow">
+          <h2 className="section-title">What Parents Say</h2>
+          <Testimonials />
+        </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="home-section cta-banner">
+      {/* Call to Action Banner */}
+      <section className="home-section cta-banner" data-aos="fade-up">
         <h2>Ready to launch your child’s coding journey?</h2>
-        <Button text="Enroll Now" link="/contact" />
+        <Button
+          label="Enroll Now"
+          onClick={() => (window.location.href = "/contact")}
+        />
       </section>
 
       <Footer />

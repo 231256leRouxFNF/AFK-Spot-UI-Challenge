@@ -1,6 +1,7 @@
 // src/components/HeroSection.js
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import Button from "./Button";
 import "./HeroSection.css";
 
 const HeroSection = () => {
@@ -18,9 +19,11 @@ const HeroSection = () => {
               aged 8 to 13. Where young minds explore the universe of code,
               games, and creativity.
             </p>
-            <Button href="/contact" className="hero-button">
-              Launch Your Journey
-            </Button>
+            <Button
+              label="Launch Your Journey"
+              onClick={() => (window.location.href = "/contact")}
+              className="hero-banner-button"
+            />
           </Col>
         </Row>
       </Container>

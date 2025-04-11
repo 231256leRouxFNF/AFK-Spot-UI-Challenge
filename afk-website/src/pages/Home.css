@@ -145,6 +145,7 @@
 .feature-text {
     flex: 1;
     min-width: 300px;
+    padding-right: 90px;
 }
 
 .feature-text h2 {
@@ -214,7 +215,7 @@
 
 /* CTA Banner */
 .cta-banner {
-    background: linear-gradient(to right, #636dc7, #6cafe2, #76cdac);
+    background: var(--color-sea-green);
     color: white;
     text-align: center;
     padding: 60px 20px;

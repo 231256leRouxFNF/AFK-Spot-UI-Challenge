@@ -1,7 +1,9 @@
 // src/pages/CurriculumPage.js
 import React from "react";
-import Footer from "../components/Footer"; // ✅ Import Footer
-import "./Curriculum.css";
+import { motion } from "framer-motion";
+import Footer from "../components/Footer";
+import HeroGraphic from "../assets/11.svg";
+import Button from "../components/Button";
 import {
   FaLaptopCode,
   FaGamepad,
@@ -13,6 +15,7 @@ import {
   FaRocket,
   FaProjectDiagram,
 } from "react-icons/fa";
+import "./Curriculum.css";
 
 const curriculumData = [
   {
@@ -111,50 +114,85 @@ const CurriculumPage = () => {
   return (
     <>
       <div className="curriculum-page">
-        {/* Overview */}
-        <section className="curriculum-section overview">
-          <h2>Program Overview</h2>
-          <p>
-            Our 10-month curriculum is designed to take students from beginner
-            to intermediate level in coding, ensuring they have a solid
-            foundation in programming by the end of the course.
-          </p>
-        </section>
+        {/* Hero Section */}
+        <motion.section
+          className="curriculum-hero-section"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <div className="curriculum-hero-container">
+            <div className="curriculum-hero-text">
+              <h1>Program Overview</h1>
+              <p>
+                Our 10-month curriculum is designed to take students from
+                beginner to intermediate level in coding, ensuring they have a
+                solid foundation in programming by the end of the course.
+              </p>
+            </div>
+            <div className="curriculum-hero-image">
+              <img
+                src={HeroGraphic}
+                alt="Curriculum Overview"
+                loading="eager"
+              />
+            </div>
+          </div>
+        </motion.section>
 
-        {/* Timeline */}
-        <section className="curriculum-section timeline">
+        {/* Timeline Section */}
+        <motion.section
+          className="curriculum-section timeline"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h2>Month-by-Month Breakdown</h2>
           <div className="timeline-container">
             {curriculumData.map((item, index) => (
-              <div className="timeline-card" key={index}>
+              <motion.div
+                key={index}
+                className="timeline-card"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.12,
+                  ease: "easeOut",
+                }}
+                viewport={{ once: true }}
+              >
                 <div className="timeline-icon">{item.icon}</div>
                 <div className="timeline-content">
                   <h3>
                     {item.month}: {item.title}
                   </h3>
                   <ul>
-                    {item.points.map((point, idx) => (
-                      <li key={idx}>{point}</li>
+                    {item.points.map((point, i) => (
+                      <li key={i}>{point}</li>
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </section>
+        </motion.section>
 
-        {/* Tools Used */}
-        <section className="curriculum-section tools-used">
-          <h2>Tools Used</h2>
-          <ul>
-            <li>
-              <strong>Scratch:</strong> February – April
-            </li>
-            <li>
-              <strong>HTML, CSS, JavaScript:</strong> May – November
-            </li>
-          </ul>
-        </section>
+        {/* CTA Banner */}
+        <motion.section
+          className="home-section cta-banner"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2>Ready to launch your child’s coding journey?</h2>
+          <Button
+            label="Enroll Now"
+            onClick={() => (window.location.href = "/contact")}
+          />
+        </motion.section>
       </div>
 
       <Footer />

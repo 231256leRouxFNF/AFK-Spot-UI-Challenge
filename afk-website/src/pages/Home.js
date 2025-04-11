@@ -15,7 +15,6 @@ import Img3 from "../assets/3.svg";
 import Img4 from "../assets/6.svg";
 import FeatureImg1 from "../assets/8.svg";
 import FeatureImg2 from "../assets/7.svg";
-import Blob1 from "../assets/Blob1.svg";
 
 import "./Home.css";
 
@@ -63,8 +62,7 @@ const Home = () => {
       {/* Highlights Section */}
       <section
         className="home-section feature bg-light-yellow"
-        data-aos="zoom-in"
-        data-aos-duration="800"
+        data-aos="fade-right"
       >
         <div className="container-narrow">
           <h2 className="section-title">What We Offer</h2>

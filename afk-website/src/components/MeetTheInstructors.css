@@ -1,60 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
+:root {
+  --color-dark-blue: #636dc7;
+  --color-pink: #faa09e;
+  --bg-white: #ffffff;
+  --text-color: #373636;
+  --card-shadow: rgba(0, 0, 0, 0.08);
+        --color-light-blue: #6cafe2;
+        --color-sea-green: #76cdac;
+        --color-yellow: #fbb739;
+        --text-color: #373636;
+        --nav-bg: #ffffff;
+
+}
+
 .instructors-section {
   padding: 80px 20px;
-  background: linear-gradient(to bottom, #f6f1ff, #eae6ff);
+  background: #fef9e7;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .instructors-title {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 700;
-  color: #2e2e6f;
+  color: var(--color-dark-blue);
+  margin-bottom: 20px;
 }
 
 .instructors-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 60px;
-  margin-top: 60px;
+  gap: 50px;
+  align-items: stretch;
 }
 
 .instructor-card {
-  background-color: white;
-  border-radius: 22px;
+  background-color: var(--bg-white);
+  border-radius: 20px;
   padding: 30px;
-  width: 420px; /*Nice */
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  width: 360px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 8px 20px var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .instructor-card:hover {
-  transform: translateY(-12px) scale(1.03);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
+/* Instructor Image */
 .instructor-image {
   width: 100%;
-  height: 260px; 
+  height: 240px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* Name & Bio */
 .instructor-name {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
-  margin-top: 24px;
-  color: #ff4fc9;
+  margin-top: 20px;
+  color: var(--color-yellow);
 }
 
 .instructor-bio {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 18px;
-  margin-top: 16px;
-  color: #333;
+  font-size: 16px;
+  margin-top: 12px;
+  color: var(--text-color);
   line-height: 1.6;
 }

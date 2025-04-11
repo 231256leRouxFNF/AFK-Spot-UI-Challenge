@@ -35,27 +35,29 @@
     line-height: 1.6;
 }
 
+.feature-image {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+}
 
 .bg-light-wave {
-    background: linear-gradient(to right, #e7f7fd, #e7f7fd);
+    background-color: #e7f7fd;
 }
 
 .bg-light-yellow {
-    background: linear-gradient(to right, #fef9e7, #fef9e7);
+    background-color: #fef9e7;
 }
 
 .highlight-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .highlight-grid {
-        grid-template-columns: 1fr;
-    }
+    padding: 0 20px;
 }
 
 .highlight-card {
